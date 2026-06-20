@@ -8,7 +8,7 @@ switch (language) {
         console.log("Привет!");
         break;  
     case "de":
-        console.log("Hallo!");
+        console.log("Gutten tag!");
         break;  
     default:
         console.log("???");
