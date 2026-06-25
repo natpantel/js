@@ -1,12 +1,7 @@
 const dateArray = ["10-02-2022", "тест", "11/12/2023", "00/13/2022", "41/12/2023"];
 
 function filterArray(array) {
-    const newArray = [];
-    array.forEach((element) => {
-        if (isDate(element)) {
-            newArray.push(element);
-        }
-    })
+    const newArray = array.filter(isDate).map(toFormatDate);
     return newArray;
 }
 
@@ -29,4 +24,9 @@ function isDate(element) {
         return false;
     }
     return true
+}
+
+function toFormatDate(element) {
+    const separator = element[2];
+    return element.split(separator).join('-')
 }
