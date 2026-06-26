@@ -22,14 +22,14 @@ const toDoList = {
     deleteTask: function (id) {
         this.tasks = this.tasks.filter(el => el.id != id)
     },
-    updateTask: function (id, newTitle) {
+    updateTask: function (id, field, value) {
         for (let task of this.tasks) {
             if (task.id == id) {
-                task.title = newTitle
+                task[field] = value;
             }
         };
     },
     sortTasks: function() {
-        this.tasks.sort((a, b) => {a.priority > b.priority})
+        this.tasks.sort((a, b) => {a.priority - b.priority})
     }
 }
