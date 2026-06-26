@@ -30,6 +30,6 @@ const toDoList = {
         };
     },
     sortTasks: function() {
-        this.tasks.sort((a, b) => {a.priority - b.priority})
+        this.tasks.sort((a, b) => {return a.priority - b.priority})
     }
 }
