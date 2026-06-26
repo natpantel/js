@@ -48,3 +48,8 @@ newTask.addTask = toDoList.addTask.bind(newTask);
 newTask.deleteTask = toDoList.deleteTask.bind(newTask);
 newTask.updateTask = toDoList.updateTask.bind(newTask);
 newTask.sortTasks = toDoList.sortTasks.bind(newTask);
+
+newTask.addTask('Поесть', 2);
+newTask.deleteTask(1);
+newTask.updateTask(2, 'name', 'Поплавать');
+newTask.sortTasks();
